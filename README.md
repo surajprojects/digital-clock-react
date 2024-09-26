@@ -25,8 +25,7 @@ This project is set up with Vite and includes ESLint for code quality checks and
 
 - @vitejs/plugin-react: Uses Babel for fast refresh.
 - @vitejs/plugin-react-swc: Uses SWC for fast refresh (optional alternative).
-- 
-
+  
 ## Deployment
 
 This web app is deployed using GitHub Pages by Tiger. You can access the live version of the app at https://surajprojects.github.io/digital-clock-react
