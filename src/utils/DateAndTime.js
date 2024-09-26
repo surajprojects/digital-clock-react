@@ -1,9 +1,12 @@
-function currentTime() {
-    const currentClock = new Date();
-    const currentHrs = currentClock.getHours();
-    const currentMins = currentClock.getMinutes();
-    const currentSecs = currentClock.getSeconds();
+// Function to get the current time (hours, minutes, seconds)
 
+function currentTime() {
+    const currentClock = new Date(); // Get the current date and time
+    const currentHrs = currentClock.getHours(); // Extract current hours
+    const currentMins = currentClock.getMinutes(); // Extract current minutes
+    const currentSecs = currentClock.getSeconds(); // Extract current seconds
+
+    // Return an object containing hours, minutes, and seconds
     return {
         hrs: currentHrs,
         mins: currentMins,
@@ -11,14 +14,17 @@ function currentTime() {
     };
 };
 
+// Function to get the current date (day, month, year, and full day name)
+
 function currentDate() {
-    const currentClock = new Date();
-    const currentDate = currentClock.getDate();
-    const currentYear = currentClock.getFullYear();
-    const currentMonth = currentClock.toDateString().slice(4, 7);
-    const currentDay = currentClock.toDateString().slice(0, 3);
+    const currentClock = new Date(); // Get the current date and time
+    const currentDate = currentClock.getDate(); // Extract current date
+    const currentYear = currentClock.getFullYear(); // Extract current year
+    const currentMonth = currentClock.toDateString().slice(4, 7); // Extract the abbreviated month name
+    const currentDay = currentClock.toDateString().slice(0, 3); // Extract the abbreviated day name
     let currentFullDay;
 
+    // Switch case to determine the full name of the day (Monday to Sunday)
     switch (currentClock.getDay()) {
         case 1:
             currentFullDay = "Monday";
@@ -39,9 +45,10 @@ function currentDate() {
             currentFullDay = "Saturday";
             break;
         default:
-            day.textContent = "Sunday";
+            currentFullDay = "Sunday"; // Default case for Sunday
     };
 
+    // Return an object containing date, month, year, abbreviated day, and full day name
     return {
         date: currentDate,
         month: currentMonth,
